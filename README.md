@@ -1,0 +1,2 @@
+# SimplePortalPermissions
+SimplePortalPermissions Plugin

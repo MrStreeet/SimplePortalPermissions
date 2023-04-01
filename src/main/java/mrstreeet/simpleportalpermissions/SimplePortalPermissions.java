@@ -21,7 +21,6 @@ public final class SimplePortalPermissions extends JavaPlugin {
 
         plugin = this;
         instance = this;
-
         Bukkit.getConsoleSender().sendMessage(name + ChatColor.GREEN + " It's now working correctly!.");
     }
 
