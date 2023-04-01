@@ -18,12 +18,11 @@ public final class SimplePortalPermissions extends JavaPlugin {
     @Override
     public void onEnable() {
         Bukkit.getConsoleSender().sendMessage(name + ChatColor.YELLOW + " Plugin it's loading...");
-        Bukkit.getConsoleSender().sendMessage(name + ChatColor.GREEN + " It's now working correctly!.");
 
         plugin = this;
         instance = this;
 
-
+        Bukkit.getConsoleSender().sendMessage(name + ChatColor.GREEN + " It's now working correctly!.");
     }
 
     @Override
