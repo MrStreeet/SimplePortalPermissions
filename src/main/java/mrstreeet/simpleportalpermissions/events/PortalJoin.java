@@ -51,9 +51,9 @@ public class PortalJoin implements Listener {
                 event.setCancelled(true);
                 //Push effect
                 if (Files.config.getBoolean(pushpath)) {
-                    player.setVelocity(player.getLocation().getDirection().multiply(Files.config.getInt("Push_Config.Nether-Velocity-Multiplier")));
-                    player.setVelocity(player.getLocation().getDirection().setY(Files.config.getInt("Push_Config.Nether-Y-Velocity")));
                     plugin.onAir_players.add(player);
+                    player.setVelocity(player.getLocation().getDirection().multiply(Files.config.getInt("Push_Config.Nether-Velocity-Multiplier")).setY(Files.config.getInt("Push_Config.Nether-Y-Velocity")));
+
                 }
                 //Message effect
                 if (Files.config.getBoolean(msgpath)) {
@@ -70,9 +70,9 @@ public class PortalJoin implements Listener {
             event.setCancelled(true);
             //Push effect
             if (Files.config.getBoolean(pushpath)) {
+                plugin.onAir_players.add(player);
                 player.setVelocity(player.getLocation().getDirection().multiply(Files.config.getInt("Push_Config.End-Velocity-Multiplier")));
                 player.setVelocity(player.getLocation().getDirection().setY(Files.config.getInt("Push_Config.End-Y-Velocity")));
-                plugin.onAir_players.add(player);
             }
             //Cooldown effects
             if (!this.cooldown.containsKey(player.getUniqueId())){

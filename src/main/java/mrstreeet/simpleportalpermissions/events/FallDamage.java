@@ -2,11 +2,10 @@ package mrstreeet.simpleportalpermissions.events;
 
 import mrstreeet.simpleportalpermissions.SimplePortalPermissions;
 import mrstreeet.simpleportalpermissions.utils.Files;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-
-import java.io.File;
 
 public class FallDamage implements Listener {
 
