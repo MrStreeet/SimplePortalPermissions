@@ -1,0 +1,31 @@
+# Welcome to the SimplePortalPermissions config.yml.
+# A simple plugin, needs a simple config.
+
+Config:
+  #This will check always for updates of the plugin automatically (In game).
+  Check-For-Updates: true
+  #Enable or Disable Fall Damage.
+  Disable-Fall-Damage: true
+
+Effects:
+  #Sends a message when a player attempts to join in a portal (You can config this on messages.yml)
+  Messages: true
+  #Plays a sound when a player attempts to join in a portal.
+  Sounds: true
+  #Push the player away from the portal.
+  Push: true
+
+Push_Config:
+  Nether-Velocity-Multiplier: -2 #Default value = -2
+  Nether-Y-Velocity: 0 #Default value = 0
+  #As a personal recommendation, changing this ones can generate bugs in your server.
+  End-Velocity-Multiplier: -3 #Default value = -3
+  End-Y-Velocity: 1 #Default value = 1
+
+Sound_Config:
+  #Check the available sounds in https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.htm
+  #Remember to put the sounds according to your server version.
+  Sound: BLOCK_STEM_PLACE
+  Volume: 100
+  Pitch: 0
+

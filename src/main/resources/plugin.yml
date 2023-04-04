@@ -2,4 +2,18 @@ name: SimplePortalPermissions
 version: '${project.version}'
 main: mrstreeet.simpleportalpermissions.SimplePortalPermissions
 api-version: 1.19
-load: STARTUP
+authors: [ MrStreeet ]
+description: A simple permission portal plugin.
+website: https://github.com/MrStreeet
+
+permissions:
+  ssp.nether:
+    description: Access to Nether
+  ssp.end:
+    description: Access to The End
+
+commands:
+  simpleportalpermissions:
+    aliases: "spp"
+    permission: "simpleportalpermissions.admin"
+    description: Main command
