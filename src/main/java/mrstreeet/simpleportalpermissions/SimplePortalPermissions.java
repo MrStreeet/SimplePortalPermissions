@@ -18,6 +18,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 
 public final class SimplePortalPermissions extends JavaPlugin {
 
@@ -27,7 +30,17 @@ public final class SimplePortalPermissions extends JavaPlugin {
     public String configPath;
     public static SimplePortalPermissions plugin;
     private static Plugin instance;
-    public ArrayList<Player> onAir_players = new ArrayList<>();
+
+
+    private final Set<String> namePlayers = new HashSet<>();
+
+    public Set<String> getNamePlayers() {
+        return this.namePlayers;
+    }
+
+    public boolean addPlayer(final Player player) {
+        return this.namePlayers.add(player.getName());
+    }
 
     @Override
     public void onEnable() {
