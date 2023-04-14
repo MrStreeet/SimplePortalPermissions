@@ -33,7 +33,7 @@ public final class SimplePortalPermissions extends JavaPlugin {
     }
     public boolean addPlayer(final Player player) {
         return this.namePlayers.add(player.getName());
-    }
+    }*/
 
     @Override
     public void onEnable() {
