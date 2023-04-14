@@ -1,2 +1,1 @@
-# SimplePortalPermissions
-SimplePortalPermissions Plugin
+![d71d27cf078891400c64398d0256948a343c9019](https://user-images.githubusercontent.com/50084238/232164683-5847c408-45a5-4c5d-ba76-d3811d2de9e9.png)
