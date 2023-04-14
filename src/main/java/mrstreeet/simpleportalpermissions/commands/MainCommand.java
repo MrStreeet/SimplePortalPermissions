@@ -46,8 +46,15 @@ public class MainCommand implements CommandExecutor {
         }else{
             Player player = (Player) sender;
             if (args.length > 0){
-                if (args[0].equalsIgnoreCase("info")){
+                if (args[0].equalsIgnoreCase("help")){
                     player.sendMessage(plugin.name + ChatColor.GREEN + " You are using SimplePortalPermissions " + ChatColor.WHITE + plugin.version);
+                    player.sendMessage(ChatColor.GREEN + " These are all the available commands:");
+                    player.sendMessage(ChatColor.WHITE + "/simpleportalpermissions or /spp " + ChatColor.YELLOW + "->" + ChatColor.GREEN + " Main command.");
+                    player.sendMessage(ChatColor.WHITE + "/simplesetspawn help " + ChatColor.YELLOW + "->" + ChatColor.GREEN + " Se all available commands.");
+                    player.sendMessage(ChatColor.WHITE + "/simplesetspawn reload " + ChatColor.YELLOW + "->" + ChatColor.GREEN + " Reload plugin files.");
+                    player.sendMessage(ChatColor.GREEN + "Do you need more help?" + ChatColor.WHITE + "Ask me on:");
+                    player.sendMessage(ChatColor.YELLOW + "https://github.com/MrStreeet/SimplePortalPermissions/issues");
+
                     return true;
                 }
             }else{

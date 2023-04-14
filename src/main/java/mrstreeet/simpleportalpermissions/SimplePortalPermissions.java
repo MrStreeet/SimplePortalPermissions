@@ -3,19 +3,14 @@ package mrstreeet.simpleportalpermissions;
 import mrstreeet.simpleportalpermissions.commands.MainCommand;
 import mrstreeet.simpleportalpermissions.events.PortalJoin;
 import mrstreeet.simpleportalpermissions.utils.Files;
+import mrstreeet.simpleportalpermissions.utils.version.ReleaseData;
+import mrstreeet.simpleportalpermissions.utils.version.UpdateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
 
 public final class SimplePortalPermissions extends JavaPlugin {
 
@@ -47,6 +42,11 @@ public final class SimplePortalPermissions extends JavaPlugin {
         registerCommand();
         registerEvents();
 
+        if (System.currentTimeMillis() > ReleaseData.RELEASE_TIME + 21600000L) {
+            updateChecker();
+        }
+
+
     }
 
     @Override
@@ -61,7 +61,16 @@ public final class SimplePortalPermissions extends JavaPlugin {
     public void registerEvents(){
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new PortalJoin(this), this);
-        //pm.registerEvents(new FallDamage(this), this);
+    }
+
+    public void updateChecker(){
+        new UpdateChecker(this, 109279).getLatestVersion(version -> {
+            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                Bukkit.getConsoleSender().sendMessage(name + ChatColor.GREEN + " It's up to date (Running version: " + ChatColor.WHITE +  version + ")");
+            }else{
+                Bukkit.getConsoleSender().sendMessage(name + ChatColor.RED + " You are running an old version of the plugin, please update to the latest version.");
+            }
+        });
     }
 
 }
