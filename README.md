@@ -12,6 +12,7 @@ SimplePortalPermissions it's a simple plugin to prevent players to go to other d
 
 ## COMMANDS
 
+- **/simpleportalpermissions or /spp** -> Main command
 - **/simpleportalpermissions help** -> Help command
 - **/simpleportalpermissions reload** -> Reloads the config
 
@@ -38,7 +39,7 @@ I'm a very early developer, so please, do not report errors on the review sectio
 
 ## TO ADD
 
-- [ ] Update Checker (It will be added in the next update)
+- [X] Update Checker (Added 15/04/2003)
 - [ ] Fall Damage prevention (It's killing me, please help)
 
 Thanks for using my plugin :D
