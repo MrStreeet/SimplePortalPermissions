@@ -4,8 +4,6 @@
 Config:
   #This will check always for updates of the plugin automatically (In game).
   Check-For-Updates: true
-  #Enable or Disable Fall Damage.
-  Disable-Fall-Damage: true
 
 Effects:
   #Sends a message when a player attempts to join in a portal (You can config this on messages.yml)

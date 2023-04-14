@@ -1,15 +1,10 @@
 package mrstreeet.simpleportalpermissions;
 
 import mrstreeet.simpleportalpermissions.commands.MainCommand;
-import mrstreeet.simpleportalpermissions.events.FallDamage;
 import mrstreeet.simpleportalpermissions.events.PortalJoin;
 import mrstreeet.simpleportalpermissions.utils.Files;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
@@ -31,13 +26,11 @@ public final class SimplePortalPermissions extends JavaPlugin {
     public static SimplePortalPermissions plugin;
     private static Plugin instance;
 
-
-    private final Set<String> namePlayers = new HashSet<>();
-
+    //-----------------FALL DAMAGE SYSTEM WIP-----------------//
+    /*private final Set<String> namePlayers = new HashSet<>();
     public Set<String> getNamePlayers() {
         return this.namePlayers;
     }
-
     public boolean addPlayer(final Player player) {
         return this.namePlayers.add(player.getName());
     }
@@ -68,7 +61,7 @@ public final class SimplePortalPermissions extends JavaPlugin {
     public void registerEvents(){
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new PortalJoin(this), this);
-        pm.registerEvents(new FallDamage(this), this);
+        //pm.registerEvents(new FallDamage(this), this);
     }
 
 }
