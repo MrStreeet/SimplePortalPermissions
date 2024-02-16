@@ -37,7 +37,7 @@ I personally made this plugin to add it as a RPG mechanic way, to make it like a
 
 I'm a very early developer, so please, do not report errors on the review section, if you need help please do it on the [Issues section](https://github.com/MrStreeet/SimplePortalPermissions/issues)
 
-## TO ADD
+## TO DO
 
 - [X] Update Checker (Added 15/04/2003)
 - [ ] Fall Damage prevention (It's killing me, please help)
